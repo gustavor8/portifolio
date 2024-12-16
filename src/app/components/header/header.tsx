@@ -4,8 +4,9 @@ import { FaArrowLeft, FaSun, FaMoon } from "react-icons/fa"; // Ícones de seta
 import { useDarkMode } from "@/hooks/useDarkMode";
 import NavList from "../navList/navList";
 import "../../globals.css";
-import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle, FaBriefcase } from "react-icons/fa";
 import { MdConstruction } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa6";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useDarkMode();
@@ -15,12 +16,12 @@ const Header: React.FC = () => {
   const basicMenuStyles: string =
     "h-[100vh] max-w-[450px] top-0 left-0 bg-gray-800 text-white flex flex-col p-4 overflow-hidden transition-all duration-500 items-center  hover:w-[15vw] ";
   const sidebarStyles: string = isCollapsed ? "w-[50px] " : "w-[15vw]"; // Reduzindo a largura para 5vw (aproximadamente 20px)
-  const buttonIconStyles: string = `transition-all duration-500 ease-in-out flex items-center justify-center w-8 h-8 bg-gray-700  hover:bg-gray-500 rounded-full`;
+  const buttonIconStyles: string = `  transition-all duration-500 ease-in-out flex items-center justify-center w-8 h-8 bg-gray-700  hover:bg-gray-500 rounded-full`;
   const buttonThemeStyles: string = `${
     isCollapsed ? "isHidden" : "noHidden "
   } hidden-transition`;
   const arrowStyles: string = isCollapsed ? "rotate-180 " : "rotate-0";
-  const navStyles: string = "w-full  border-t-2 border-gray-500  ";
+  const navStyles: string = " mr-[7px] w-full  border-t-2 border-gray-500  ";
 
   // Função para alternar o estado de colapso
   const toggleSidebar = () => {
@@ -50,17 +51,17 @@ const Header: React.FC = () => {
         <NavList
           title="Projects"
           icon={<MdConstruction size={25} />}
-          // links={[
-          //   { href: "teste", label: "teste" },
-          //   { href: "teste2", label: "teste2" },
-          // ]}
           linkItem="#projects"
         ></NavList>
-
         <NavList
-          title="Projects"
-          icon={<MdConstruction size={25} />}
-          linkItem="#projects"
+          title="Formation"
+          icon={<FaGraduationCap size={25} />}
+          linkItem="#formation"
+        ></NavList>
+        <NavList
+          title="Experience"
+          icon={<FaBriefcase size={25} />}
+          linkItem="#experience"
         ></NavList>
         <ul style={{ listStyle: "none", padding: 0 }}></ul>
       </nav>

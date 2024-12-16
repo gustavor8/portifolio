@@ -90,6 +90,10 @@ export default function Main() {
     },
   ];
 
+  const stylesTitle: string =
+    " textShadow flex mb-0 justify-center shadow-lg shadow-[#00000030]  text-[5rem] dark:text-white transition-all duration-1000 ease-in-out";
+  const stylesSection: string = `bg-gradient-to-r from-gray-500 to-gray-200 dark:bg-gradient-to-r dark:from-[#494949] dark:to-[#494949]  p-3 shadow-lg shadow-[#FF573350] dark:shadow-[#FF573350] mb-1 gap-2`;
+
   return (
     <div className={`${stylesMain}`}>
       {/*Section Sobre */}
@@ -97,14 +101,10 @@ export default function Main() {
         id="about"
         className={`home h-[100vh] shadow-md shadow-[#FF5733] `}
       ></section>
+
       {/* Section Projects */}
-      <section
-        id="projects"
-        className={`bg-gradient-to-r from-gray-500 to-gray-200 dark:bg-gradient-to-r dark:from-[#494949] dark:to-[#494949] `}
-      >
-        <h1 className=" textShadow flex mb-0 justify-center shadow-lg  text-[5rem] dark:text-white transition-all duration-1000 ease-in-out">
-          <span className="">Projetos</span>
-        </h1>
+      <section id="projects" className={stylesSection}>
+        <h1 className={stylesTitle}>Projects</h1>
 
         <div className="flex items-center justify-center p-[1rem] flex-wrap gap-4">
           {projectsJson.map((project, index) => (
@@ -119,6 +119,22 @@ export default function Main() {
             ></Project>
           ))}
         </div>
+      </section>
+
+      {/* Section Formation */}
+      <section id="formation" className={` ${stylesSection}`}>
+        <h1 className={stylesTitle}>Formation</h1>
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          reiciendis consectetur fugiat officia ducimus ab laboriosam sint
+          possimus enim eum autem doloribus totam, inventore minima itaque
+          officiis, cum similique hic?
+        </h1>
+      </section>
+
+      {/* Section Experience */}
+      <section id="experience" className={stylesSection}>
+        <h1 className={stylesTitle}>Experience</h1>
       </section>
     </div>
   );

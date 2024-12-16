@@ -1,6 +1,6 @@
 .home {
   position: relative; /* Necessário para o pseudo-elemento */
-  background-image: url("../../../Assets/img/bgHome.jpg");
+  background-image: url("../../../../public/Assets/img/bgHome.jpg");
   background-size: cover;
   background-position: center;
 }
