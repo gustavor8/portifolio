@@ -1,0 +1,29 @@
+.home {
+  position: relative; /* Necessário para o pseudo-elemento */
+  background-image: url("../../../Assets/img/bgHome.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 1000ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3); /* Filtro padrão */
+  z-index: 1;
+}
+
+.dark .home::before {
+  transition: background-color 1000ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6); /* Filtro mais escuro no modo dark */
+  z-index: 2;
+}
+
+/* .home > * {
+  position: relative;
+  ;
+} */
