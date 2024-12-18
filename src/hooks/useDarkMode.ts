@@ -3,26 +3,39 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark";
 
 export function useDarkMode() {
-  //initializes theme state based on user preference or system theme
-  const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-    if (savedTheme) return savedTheme;
+  // Initializes theme state based on user preference or system theme
+  const [theme, setTheme] = useState<Theme>("light");
 
-    //take the system theme if no preference have been saved
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  });
-
-  //apply the theme class when loading the component and whenever the state changes
+  // Use effect to check for theme preference only on the client side
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme == "dark");
-    localStorage.setItem("theme", theme);
+    // Ensure the code only runs on the client (browser)
+    if (typeof window !== "undefined") {
+      // Get saved theme from localStorage
+      const savedTheme = localStorage.getItem("theme") as Theme | null;
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        // Use system preference if no saved theme
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light";
+        setTheme(systemTheme);
+      }
+    }
+  }, []); // Run only once after the initial render (client-side)
+
+  // Apply the theme class and update localStorage whenever the theme changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
-  //toggle between the dark and light theme
+  // Toggle between dark and light themes
   const toggleTheme = () => {
-    setTheme((prev) => (prev == "dark" ? "light" : "dark"));
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return { theme, toggleTheme };
