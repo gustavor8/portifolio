@@ -1,6 +1,6 @@
 // import { title } from "process";
 import React, { useState, useEffect, useRef } from "react";
-import { FaArrowDown, FaHome } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import NavListProps from "./navListType";
 
 const NavList: React.FC<NavListProps> = ({ title, icon, links, linkItem }) => {
