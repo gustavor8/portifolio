@@ -26,14 +26,14 @@ export default function Project({
       statusInfoStyle = "bg-orange-500";
       break;
     default:
-      statusInfoStyle = "b";
+      statusInfoStyle = "";
       break;
   }
   const stylesLinks =
     "bg-gray-300 g p-1 rounded-md hover:bg-blue-400 transition-all ease-in-out duration-300 dark:bg-gray-600 dark:hover:bg-black dark:text-white cursor-pointer shadow-md shadow-[#00000080] text-center  ";
 
   return (
-    <article className="h-[16rem] w-[12rem] p-[0.5rem] flex flex-row items-center justify-center rounded-[10px] shadow-md shadow-[#FF5733] bg-slate-400  dark:bg-slate-800 flex-wrap dark:text-white transition-colors duration-300 ease-in-out overflow-y-auto">
+    <article className="h-[16rem] w-[12rem] p-[0.5rem] flex items-center justify-center rounded-[10px] shadow-md shadow-[#FF5733] bg-slate-400  dark:bg-slate-800 flex-wrap dark:text-white transition-colors duration-300 ease-in-out overflow-y-auto">
       <h2 className="font-bold text-center leading-none">
         {name.toUpperCase()}
       </h2>
