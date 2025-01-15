@@ -1,0 +1,8 @@
+.photoBg {
+  background-image: url("../../../../public/Assets/img/photo.jpg"); /* Caminho da imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a div */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+  border-radius: 100%;
+}

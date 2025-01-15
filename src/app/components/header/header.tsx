@@ -4,7 +4,7 @@ import { FaArrowLeft, FaSun, FaMoon } from "react-icons/fa"; // Ícones de seta
 import { useDarkMode } from "@/hooks/useDarkMode";
 import NavList from "../navList/navList";
 import "../../globals.css";
-import { FaInfoCircle, FaBriefcase, FaBook } from "react-icons/fa";
+import { FaBook, FaHome } from "react-icons/fa";
 import { MdConstruction } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa6";
 
@@ -43,8 +43,8 @@ const Header: React.FC = () => {
 
       <nav className={navStyles}>
         <NavList
-          title="Sobre"
-          icon={<FaInfoCircle size={25} />}
+          title="Sobre Mim"
+          icon={<FaHome size={25} />}
           linkItem="#about"
         ></NavList>
 
@@ -63,12 +63,12 @@ const Header: React.FC = () => {
           icon={<FaBook size={25} />}
           linkItem="#courses"
         ></NavList>
-        <NavList
+        {/* <NavList
           title="Experiência"
           icon={<FaBriefcase size={25} />}
           linkItem="#experience"
         ></NavList>
-        <ul style={{ listStyle: "none", padding: 0 }}></ul>
+        <ul style={{ listStyle: "none", padding: 0 }}></ul> */}
       </nav>
     </div>
   );

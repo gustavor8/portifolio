@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br" style={{ scrollBehavior: "smooth" }}>
       <body>
         <div className="min-h-screen flex w-full">
           <Header />

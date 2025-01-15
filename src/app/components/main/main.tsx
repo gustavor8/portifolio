@@ -3,6 +3,7 @@ import Project from "../projectCard/project";
 import ProjectProps from "../projectCard/projectType";
 import FormationCardTypes from "../formationCard/formationType";
 import Formation from "../formationCard/formation";
+import About from "../about/about";
 // Import Icons
 import { FaReact, FaHtml5, FaSass, FaNodeJs } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -192,7 +193,9 @@ export default function Main() {
       <section
         id="about"
         className={`home h-[100vh] shadow-md shadow-[#FF5733] `}
-      ></section>
+      >
+        <About />
+      </section>
 
       {/* Section Projects */}
       <section id="projects" className={stylesSection}>
@@ -231,7 +234,7 @@ export default function Main() {
       </section>
       {/* Section Courses */}
       <section id="courses" className={` ${stylesSection}`}>
-        <h1 className={stylesTitle}>Cursos Extra</h1>
+        <h1 className={stylesTitle}>Cursos</h1>
         <div className="flex items-center justify-center p-[1rem] flex-wrap gap-4">
           {coursesJson.map((formation, index) => (
             <Formation
@@ -244,11 +247,6 @@ export default function Main() {
             />
           ))}
         </div>
-      </section>
-
-      {/* Section Experience */}
-      <section id="experience" className={stylesSection}>
-        <h1 className={stylesTitle}>Experiência</h1>
       </section>
     </div>
   );
