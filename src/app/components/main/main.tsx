@@ -5,7 +5,7 @@ import FormationCardTypes from "../formationCard/formationType";
 import Formation from "../formationCard/formation";
 import About from "../about/about";
 // Import Icons
-import { FaReact, FaHtml5, FaSass, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaHtml5, FaSass, FaNodeJs, FaCss3Alt  } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BsFiletypeJsx } from "react-icons/bs";
 import {
@@ -19,6 +19,20 @@ import {
 export default function Main() {
   const stylesMain: string = "h-[100vh] overflow-y-scroll";
   const projectsJson: ProjectProps[] = [
+    {
+      name: "Sortear Amigo",
+      status: "Finalizado",
+      description:
+        "Desafio Proposto pela Oracle One: Este projeto foi desenvolvido como parte de um desafio do programa Oracle One. A proposta consistia em criar uma aplicação web interativa de 'Amigo Secreto' usando as tecnologias HTML, CSS e JavaScript, mas com foco na lógica de programção. A aplicação permite que os usuários adicionem nomes a uma lista e, em seguida, sorteiem aleatoriamente um nome para realizar o sorteio do amigo secreto. A interface é simples e funcional, com validação para garantir que o sorteio seja feito apenas após a adição de amigos à lista.",
+      tecnology: [
+        { name: "JavaScript", icon: <RiJavascriptFill size={25} /> },
+        { name: "HTML", icon: <FaHtml5 size={25} /> },
+        { name: "CSS", icon: <FaCss3Alt size={25} /> },
+      ],
+      repository: "https://github.com/gustavor8/challenge-amigo-secreto_Oracle_ONE",
+      linkExecute: "https://gustavor8.github.io/challenge-amigo-secreto_Oracle_ONE/",
+    },
+
     {
       name: "BOOKS VNW",
       status: "Finalizado",
