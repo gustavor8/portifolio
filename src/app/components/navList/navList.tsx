@@ -9,7 +9,7 @@ const NavList: React.FC<NavListProps> = ({ title, icon, links, linkItem }) => {
 
   //styles
   const buttonIconStyles: string = `p-1 transition-all duration-500 ease-in-out flex items-center justify-center w-9 h-9 mr-[10px] hover:rounded-full `;
-  const ulNavStyles: string = `overflow-hidden transition-all duration-500 ease-in-out transform cursor-pointer  ${
+  const ulNavStyles: string = `overflow-hidden transition-all duration-500 ease-in-out transform cursor-pointer   ${
     isVisible
       ? "max-h-[500px] opacity-100 translate-y-0 bg-gray-700"
       : "max-h-0 opacity-0 translate-y-[-20px]"
@@ -59,7 +59,7 @@ const NavList: React.FC<NavListProps> = ({ title, icon, links, linkItem }) => {
         {linkItem ? (
           <a href={linkItem} className={`w-[90%] flex items-center `}>
             <button className={buttonIconStyles}>{icon}</button>
-            <h1 className="text-lg font-bold ">{title}</h1>
+            <h1 className="text-lg font-bold whitespace-nowrap">{title}</h1>
           </a>
         ) : (
           <>
