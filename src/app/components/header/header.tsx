@@ -1,7 +1,8 @@
 "use client"; // Aviso para habilitar componentes React no Next.js 13+
-import { useState } from "react"; // Importando useState
+import { useState, useContext } from "react"; // Importando useState
 import { FaArrowLeft, FaSun, FaMoon } from "react-icons/fa"; // Ícones de seta
 import { useDarkMode } from "@/hooks/useDarkMode";
+import { ScreenSizeContext } from "../../../hooks/screenSize";
 import NavList from "../navList/navList";
 import "../../globals.css";
 import { FaBook, FaHome } from "react-icons/fa";
@@ -10,33 +11,49 @@ import { FaGraduationCap } from "react-icons/fa6";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useDarkMode();
-  const [isCollapsed, setIsCollapsed] = useState(false); // Estado para controlar se o menu está colapsado
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const { isMobile } = useContext(ScreenSizeContext) || { isMobile: false };
 
   // Styles
   const basicMenuStyles: string =
-    "h-[100vh] max-w-[450px] top-0 left-0 bg-gray-800 text-white flex flex-col p-4 overflow-hidden transition-all duration-500 items-center  hover:w-[15vw] ";
-  const sidebarStyles: string = isCollapsed ? "w-[50px] " : "w-[15vw]"; // Reduzindo a largura para 5vw (aproximadamente 20px)
-  const buttonIconStyles: string = `  transition-all duration-500 ease-in-out flex items-center justify-center w-8 h-8 bg-gray-700  hover:bg-gray-500 rounded-full`;
+    "h-[100vh] max-w-[450px] min-w-[50px] top-0 left-0 bg-gray-800 text-white flex flex-col p-4 overflow-hidden transition-all duration-500 items-center  hover:w-[15vw] ";
+  const buttonIconStyles: string = `transition-all duration-500 ease-in-out flex items-center justify-center w-8 h-8 bg-gray-700  hover:bg-gray-500 rounded-full`;
   const buttonThemeStyles: string = `${
     isCollapsed ? "isHidden" : "noHidden "
   } hidden-transition`;
   const arrowStyles: string = isCollapsed ? "rotate-180 " : "rotate-0";
-  const navStyles: string = " mr-[7px] w-full  border-t-2 border-gray-500  ";
+  const navStyles: string = " mr-[7px] w-full  border-t-2 border-gray-500";
 
   // Função para alternar o estado de colapso
   const toggleSidebar = () => {
     setIsCollapsed((prevState) => !prevState);
   };
 
+  // useEffect(() => {
+  //   const checkScreenSize = () => {
+  //     setIsMobile(window.innerWidth < 1200);
+  //   };
+
+  //   checkScreenSize(); // Verifica no início
+  //   window.addEventListener("resize", checkScreenSize);
+  //   return () => window.removeEventListener("resize", checkScreenSize);
+  // }, []);
+
+  const sidebarStyles = isMobile
+    ? "w-[50px]"
+    : isCollapsed
+    ? "w-[50px]"
+    : "w-[15vw]";
+
   return (
-    <div className={`${sidebarStyles} ${basicMenuStyles}`}>
+    <div className={`${sidebarStyles} ${basicMenuStyles} z-50`}>
       <div className="flex  justify-center h-[30px] mb-3">
         {/* prettier-ignore */}
-        <button onClick={toggleSidebar}  className={`${buttonIconStyles} ${arrowStyles}`}>
+        <button onClick={toggleSidebar}  className={`${buttonIconStyles} ${arrowStyles} ${isMobile? "hidden" : ""}`}>
           <FaArrowLeft />
         </button>
         {/* prettier-ignore */}
-        <button onClick={toggleTheme} className={`ml-4 ${buttonThemeStyles} ${buttonIconStyles} `}>
+        <button onClick={toggleTheme} className={`ml-4 ${buttonThemeStyles} ${buttonIconStyles} z-50`}>
           {theme === "dark" ? (<FaSun className="w-6 h-6" />) : (<FaMoon className="w-6 h-6" /> )}
         </button>
       </div>

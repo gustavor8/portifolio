@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./components/header/header";
+import { ScreenSizeProvider } from "../hooks/screenSize"; // Caminho para o seu contexto
 
 export const metadata = {
   title: "Gustavo Rodrigues",
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br" style={{ scrollBehavior: "smooth" }}>
       <body>
-        <div className="min-h-screen flex w-full">
-          <Header />
-          <main className="flex-grow w-full">{children}</main>
-        </div>
+        <ScreenSizeProvider>
+          <div className="min-h-screen flex w-full">
+            <Header />
+            <main className="flex-grow w-full">{children}</main>
+          </div>
+        </ScreenSizeProvider>
       </body>
     </html>
   );

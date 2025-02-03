@@ -1,4 +1,6 @@
 import "./aboutStyles.css";
+import Image from "next/image";
+import photoGus from "../../../../public/Assets/img/photoGus2.png";
 
 export default function About() {
   return (
@@ -24,8 +26,13 @@ export default function About() {
           ideias em realidade de forma eficaz e impactante.
         </h1>
       </div>
-      <div className=" h-[80vh] w-[40%] overflow-hidden">
-        {/* <image src = "../../../../public/Assets/img/photo.jpg"/> */}
+      <div className=" h-[80vh] w-[40%] overflow-hidden flex justify-center">
+        <Image
+          className="imgFloat"
+          src={photoGus}
+          alt="Picture of the author"
+          style={{ width: "80%", height: "auto", maxWidth: "370px" }}
+        />
       </div>
     </div>
   );
