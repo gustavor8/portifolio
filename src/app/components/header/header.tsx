@@ -1,6 +1,6 @@
 "use client"; // Aviso para habilitar componentes React no Next.js 13+
-import { useState, useContext } from "react"; // Importando useState
-import { FaArrowLeft, FaSun, FaMoon } from "react-icons/fa"; // Ícones de seta
+import { useState, useContext } from "react";
+import { FaArrowLeft, FaSun, FaMoon } from "react-icons/fa";
 import { useDarkMode } from "@/hooks/useDarkMode";
 import { ScreenSizeContext } from "../../../hooks/screenSize";
 import NavList from "../navList/navList";
@@ -28,16 +28,6 @@ const Header: React.FC = () => {
   const toggleSidebar = () => {
     setIsCollapsed((prevState) => !prevState);
   };
-
-  // useEffect(() => {
-  //   const checkScreenSize = () => {
-  //     setIsMobile(window.innerWidth < 1200);
-  //   };
-
-  //   checkScreenSize(); // Verifica no início
-  //   window.addEventListener("resize", checkScreenSize);
-  //   return () => window.removeEventListener("resize", checkScreenSize);
-  // }, []);
 
   const sidebarStyles = isMobile
     ? "w-[50px]"

@@ -1,3 +1,5 @@
+"use Client";
+
 import "./stylesMain.css";
 import Project from "../projectCard/project";
 import ProjectProps from "../projectCard/projectType";
@@ -5,7 +7,7 @@ import FormationCardTypes from "../formationCard/formationType";
 import Formation from "../formationCard/formation";
 import About from "../about/about";
 // Import Icons
-import { FaReact, FaHtml5, FaSass, FaNodeJs, FaCss3Alt  } from "react-icons/fa";
+import { FaReact, FaHtml5, FaSass, FaNodeJs, FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BsFiletypeJsx } from "react-icons/bs";
 import {
@@ -17,7 +19,11 @@ import {
 } from "react-icons/si";
 
 export default function Main() {
-  const stylesMain: string = "h-[100vh] overflow-y-scroll";
+  const stylesMain: string = " h-[100vh] overflow-y-scroll";
+  const stylesTitle: string =
+    "textShadow flex mb-0 justify-center shadow-lg shadow-[#00000030]  text-[3.5rem] dark:text-white transition-all duration-1000 ease-in-out";
+  const stylesSection: string = `bg-gradient-to-r from-gray-500 to-gray-200 dark:bg-gradient-to-r dark:from-[#494949] dark:to-[#494949]  p-3 shadow-lg shadow-[#FF573350] dark:shadow-[#FF573350] mb-1`;
+
   const projectsJson: ProjectProps[] = [
     {
       name: "Sortear Amigo",
@@ -29,8 +35,10 @@ export default function Main() {
         { name: "HTML", icon: <FaHtml5 size={25} /> },
         { name: "CSS", icon: <FaCss3Alt size={25} /> },
       ],
-      repository: "https://github.com/gustavor8/challenge-amigo-secreto_Oracle_ONE",
-      linkExecute: "https://gustavor8.github.io/challenge-amigo-secreto_Oracle_ONE/",
+      repository:
+        "https://github.com/gustavor8/challenge-amigo-secreto_Oracle_ONE",
+      linkExecute:
+        "https://gustavor8.github.io/challenge-amigo-secreto_Oracle_ONE/",
     },
 
     {
@@ -197,23 +205,19 @@ export default function Main() {
     },
   ];
 
-  const stylesTitle: string =
-    " textShadow flex mb-0 justify-center shadow-lg shadow-[#00000030]  text-[5rem] dark:text-white transition-all duration-1000 ease-in-out";
-  const stylesSection: string = `bg-gradient-to-r from-gray-500 to-gray-200 dark:bg-gradient-to-r dark:from-[#494949] dark:to-[#494949]  p-3 shadow-lg shadow-[#FF573350] dark:shadow-[#FF573350] mb-1`;
-
   return (
     <div className={`${stylesMain}`}>
       {/*Section Sobre */}
       <section
         id="about"
-        className={`home h-[100vh] shadow-md shadow-[#FF5733] `}
+        className={`home h-[100vh] shadow-md shadow-[#FF5733]`}
       >
         <About />
       </section>
 
       {/* Section Projects */}
       <section id="projects" className={stylesSection}>
-        <h1 className={stylesTitle}>Projetos</h1>
+        <h1 className={`${stylesTitle}`}>Projetos</h1>
 
         <div className="flex items-center justify-center p-[1rem] flex-wrap gap-4">
           {projectsJson.map((project, index) => (
