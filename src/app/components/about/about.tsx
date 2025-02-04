@@ -43,7 +43,7 @@ export default function About() {
       </div>
       <div
         className={`h-[80vh] w-[40%] overflow-hidden flex justify-center ${
-          isMobile ? "h-[45vh] w-full max-w-[280]" : "max-w-[370]"
+          isMobile ? "h-[45vh] w-[45%] " : "max-w-[370px]"
         }`}
       >
         <Image
