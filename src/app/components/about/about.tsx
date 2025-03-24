@@ -31,14 +31,7 @@ export default function About() {
           >
             Bem-vindo ao meu portfólio!
           </span>
-          Sou um profissional apaixonado por tecnologia e inovação! Estou sempre
-          em busca de novos desafios e oportunidades para crescer e aprender.
-          Carrego comigo o sonho de me tornar um grande e renomado
-          desenvolvedor. Neste portfólio, você encontrará uma seleção dos meus
-          projetos mais recentes, que refletem minha dedicação e o meu
-          comprometimento em entregar soluções criativas e funcionais. Meu
-          objetivo é não apenas resolver problemas, mas também transformar
-          ideias em realidade de forma eficaz e impactante.
+          Olá! Atuo como desenvolvedor Full Stack com formação em Análise e Desenvolvimento de Sistemas e especializações em Desenvolvimento Web, Big Data & Cloud Computing. Tenho experiência com HTML, CSS, JavaScript, React, Node.js, Python e Angular, além de conhecimentos em redes e suporte técnico. Atualmente, trabalho com suporte operacional de hardware e software, lidando com atendimento a usuários, manutenção de redes e infraestrutura de TI. Minha trajetória também inclui experiência em telecomunicações e monitoramento de redes.
         </h1>
       </div>
       <div

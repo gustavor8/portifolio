@@ -56,18 +56,6 @@ export default function Main() {
       repository: "https://github.com/gustavor8/booksVNW",
       linkExecute: "https://books-vnw.vercel.app/",
     },
-    {
-      name: "StudyControl",
-      status: "Em Produção",
-      description:
-        "Assim como o Checkin-On, O projeto trata de um plano piloto para aprender algumas tecnologias. As escolhidas da vez foram TypeScript, Tailwind e Next.js. Além disso, busca atender as necessidades encontradas na organização do aprendizado. Ele está em sua fase inicial, e está sendo desenvolvido em parcerias com o dev e amigo, Gabriel Aguiar. Usamos TSX, tailwind e Next.js",
-      tecnology: [
-        { name: "TypeScript", icon: <SiTypescript size={25} /> },
-        { name: "tailwind", icon: <SiTailwindcss size={25} /> },
-        { name: "Next", icon: <SiNextdotjs size={25} /> },
-      ],
-      repository: "https://github.com/gustavor8/StudyControl",
-    },
 
     {
       name: "October Pink",
