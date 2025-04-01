@@ -45,7 +45,7 @@ export default function Main() {
       name: "BOOKS VNW",
       status: "Finalizado",
       description:
-        "Foi um desafio proposto pelo Vai Na Web no curso de desenvolvimento fullstack. Trata do desafio final do módulo React. A proposta era fazer um sistema básico de doação de livros completamente responsivo usando as tecnologias JavaScript, JSX, HTML, CSS e SASS. Destarte, assim foi feito. Além disso, foi utilizado Vite como gerenciador de projeto.",
+        "Este projeto foi desenvolvido como parte do desafio final do módulo React no curso de desenvolvimento fullstack do Vai Na Web. O objetivo era criar um sistema responsivo de doação de livros, utilizando JavaScript, JSX, HTML, CSS e SASS, com o Vite como gerenciador de projeto, vale destacar a responsividade. Para expandir as funcionalidades e garantir a persistência dos dados, foi adicionado um backend desenvolvido com Python, Flask e SQLite. Essa implementação permite o armazenamento, a consulta e o gerenciamento eficiente dos livros doados. O projeto combina uma interface moderna e intuitiva com uma estrutura robusta no backend, garantindo uma experiência fluida para os usuários.",
       tecnology: [
         { name: "React", icon: <FaReact size={25} /> },
         { name: "JavaScript", icon: <RiJavascriptFill size={25} /> },
@@ -154,6 +154,12 @@ export default function Main() {
     },
   ];
   const coursesJson: FormationCardTypes[] = [
+    {
+      course: "Desenvolvimento fullstack - React e Python",
+      institution: "Vai Na Web",
+      conclusionYear: 2025,
+      status: "Concluído",
+    },
     {
       course: "Programador Web",
       institution:

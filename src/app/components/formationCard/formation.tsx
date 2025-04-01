@@ -27,14 +27,14 @@ export default function Formation({
       <h2 className="font-bold"> {course.toUpperCase()}</h2>
       {level ? (
         <h2 className={stylesBorder}>
-          <span className={styleTextDescribe}>Level: </span>
+          <span className={styleTextDescribe}>Nível: </span>
           {level}
         </h2>
       ) : (
         ""
       )}
       <h3 className={stylesBorder}>
-        <span className={styleTextDescribe}>Instituition:</span> {institution}
+        <span className={styleTextDescribe}>Instituição:</span> {institution}
       </h3>
       <div className="w-full">
         <h3 className={stylesBorder}>
