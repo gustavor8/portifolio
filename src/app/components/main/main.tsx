@@ -10,13 +10,7 @@ import About from "../about/about";
 import { FaReact, FaHtml5, FaSass, FaNodeJs, FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BsFiletypeJsx } from "react-icons/bs";
-import {
-  SiStyledcomponents,
-  SiTypescript,
-  SiTailwindcss,
-  SiNextdotjs,
-  SiMongodb,
-} from "react-icons/si";
+import { SiStyledcomponents, SiMongodb } from "react-icons/si";
 
 export default function Main() {
   const stylesMain: string = " h-[100vh] overflow-y-scroll";
