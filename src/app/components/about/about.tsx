@@ -31,7 +31,7 @@ export default function About() {
           >
             Bem-vindo ao meu portfólio!
           </span>
-          Olá! Atuo como desenvolvedor Full Stack com formação em Análise e Desenvolvimento de Sistemas e especializações em Desenvolvimento Web, Big Data & Cloud Computing. Tenho experiência com HTML, CSS, JavaScript, React, Node.js, Python e Angular, além de conhecimentos em redes e suporte técnico. Atualmente, trabalho com suporte operacional de hardware e software, lidando com atendimento a usuários, manutenção de redes e infraestrutura de TI. Minha trajetória também inclui experiência em telecomunicações e monitoramento de redes.
+          Sou desenvolvedor Full Stack com formação em Análise e Desenvolvimento de Sistemas e especialização em Desenvolvimento Web, Big Data e Cloud Computing. Possuo conhecimento no desenvolvimento de aplicações web com HTML, CSS, JavaScript, React, Node.js, Angular e Python. Tenho também sólida vivência em infraestrutura de TI, suporte técnico, manutenção de redes e ambientes computacionais. Minha trajetória profissional é marcada por versatilidade, facilidade de aprendizado e capacidade de transitar entre as áreas de desenvolvimento, redes e suporte técnico.
         </h1>
       </div>
       <div
