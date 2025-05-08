@@ -36,14 +36,19 @@ export default function About() {
           >
             Bem-vindo ao meu portfólio!
           </span>
-          Atuo como desenvolvedor Full Stack com formação em Análise e
-          Desenvolvimento de Sistemas e especializações em Desenvolvimento Web,
-          Big Data & Cloud Computing. Tenho experiência com HTML, CSS,
-          JavaScript, React, Node.js, Python e Angular, além de conhecimentos em
-          redes e suporte técnico. Atualmente, trabalho com suporte operacional
-          de hardware e software, lidando com atendimento a usuários, manutenção
-          de redes e infraestrutura de TI. Minha trajetória também inclui
-          experiência em telecomunicações e monitoramento de redes.
+          Olá, meu nome é Gustavo, sou Desenvolvedor Web Júnior. Atuo criando
+          soluções tecnológicas que têm como propósito aprimorar processos,
+          otimizar resultados e melhorar a experiência do usuário. Para isso,
+          utilizo linguagens e frameworks como React, Angular, Python, Node.js,
+          além de tecnologias voltadas para o desenvolvimento web. Minha missão
+          como desenvolvedor é transformar ideias em aplicações funcionais,
+          intuitivas e que gerem valor real para pessoas e negócios, sempre com
+          foco em performance, usabilidade e eficiência. Ao longo da minha
+          trajetória, desenvolvi habilidades em suporte técnico,
+          telecomunicações e desenvolvimento de aplicações web. Já atuei com
+          suporte remoto ao cliente, manutenção de sistemas, resolução de
+          problemas de TI e hoje avanço na construção de projetos práticos em
+          front-end e back-end.
         </h1>
       </div>
 
