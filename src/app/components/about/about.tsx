@@ -27,7 +27,7 @@ export default function About() {
           className={`p-[1em] text-wrap text-center rounded-lg bg-[#e0e0e02a] dark:bg-[#E0E0E033] 
       w-[95%] max-h-[97%] text-white textShadow transition-colors duration-500 
       ease-in-out overflow-y-auto overflow-hidden 
-      ${isMobile ? "text-[1em] ml-[-55px]" : "text-[1.4rem]"}`}
+      ${isMobile ? "text-[1em] ml-[-55px]" : "text-[1.3rem]"}`}
         >
           <span
             className={`block w-full text-orange-500 textShadow ${
