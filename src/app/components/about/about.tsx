@@ -78,7 +78,7 @@ export default function About() {
             </a>
           </li>
           <li className={styleContact}>
-            <a href="https://w.app/58gdqm" target="_blank">
+            <a href="https://wa.me/5588993709217" target="_blank">
               <FaWhatsapp size={40} className={styleContactIcon}>
                 {" "}
               </FaWhatsapp>
