@@ -19,6 +19,22 @@ export default function Main() {
   const stylesSection: string = `bg-gradient-to-r from-gray-500 to-gray-200 dark:bg-gradient-to-r dark:from-[#494949] dark:to-[#494949]  p-3 shadow-lg shadow-[#FF573350] dark:shadow-[#FF573350] mb-1`;
 
   const projectsJson: ProjectProps[] = [
+     {
+      name: "Digital Store",
+      status: "Finalizado",
+      description:
+        "Este projeto foi desenvolvido como parte do desafio final do módulo de Front-end do curso Full Stack React + Node, oferecido pela iniciativa Geração Tech 2.0. A proposta consistia em construir uma aplicação web completa utilizando React, com foco em responsividade, consumo de APIs, gerenciamento de estados, rotas e formulários com validações. O principal objetivo deste desafio foi consolidar os conhecimentos adquiridos ao longo do módulo, por meio da aplicação de boas práticas de desenvolvimento front-end moderno. O projeto foi realizado de forma colaborativa pelos desenvolvedores João Luis Silva, Venâncio, José Jeferson e por mim, promovendo o trabalho em equipe e a integração de diferentes habilidades técnicas.",
+      tecnology: [
+       { name: "React", icon: <FaReact size={25} /> },
+        { name: "JavaScript", icon: <RiJavascriptFill size={25} /> },
+        { name: "HTML", icon: <FaHtml5 size={25} /> },
+        { name: "JSX", icon: <BsFiletypeJsx size={25} /> },
+      ],
+      repository:
+        "https://github.com/gustavor8/challenge-front-geracao-tech",
+      linkExecute:
+        "https://challenge-front-geracao-tech-r3a4.vercel.app/",
+    },
     {
       name: "Sortear Amigo",
       status: "Finalizado",
