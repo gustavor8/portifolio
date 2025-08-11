@@ -165,6 +165,12 @@ export default function Main() {
   ];
   const coursesJson: FormationCardTypes[] = [
     {
+      course: "Desenvolvimento fullstack - React e NodeJS",
+      institution: "Insituto Atlântico - Capacita Brasil",
+      conclusionYear: 2025,
+      status: "Concluído",
+    },
+    {
       course: "Desenvolvimento fullstack - React e Python",
       institution: "Vai Na Web",
       conclusionYear: 2025,
@@ -189,12 +195,7 @@ export default function Main() {
       conclusionYear: 2023,
       status: "Concluído",
     },
-    {
-      course: "Cabeamento Estruturado",
-      institution: "EAD CCNA",
-      conclusionYear: 2018,
-      status: "Concluído",
-    },
+  
     {
       course: "Python Básico",
       institution: "Solyd Treinamentos",
