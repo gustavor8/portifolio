@@ -21,7 +21,7 @@ export default function Main() {
   const projectsJson: ProjectProps[] = [
      {
       name: "Digital Store",
-      status: "Finalizado",
+      status: "Pausado",
       description:
         "Este projeto foi desenvolvido como parte do desafio final do módulo de Front-end do curso Full Stack React + Node, oferecido pela iniciativa Geração Tech 2.0. A proposta consistia em construir uma aplicação web completa utilizando React, com foco em responsividade, consumo de APIs, gerenciamento de estados, rotas e formulários com validações. O principal objetivo deste desafio foi consolidar os conhecimentos adquiridos ao longo do módulo, por meio da aplicação de boas práticas de desenvolvimento front-end moderno. O projeto foi realizado de forma colaborativa pelos desenvolvedores João Luis Silva, Venâncio, José Jeferson e por mim, promovendo o trabalho em equipe e a integração de diferentes habilidades técnicas.",
       tecnology: [
